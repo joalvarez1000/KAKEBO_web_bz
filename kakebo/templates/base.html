@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kakebo | {% block titulo%}{% endblock%}inicio</title>
+    <title>Kakebo | {% block titulo %}{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/mini-default.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
 </head>
 <body>
     <header>
-        Kakebo web -BZ VII
+        Kakebo Web - BZ VII
     </header>
     {% with mensajes = get_flashed_messages(with_categories = true) %}
         {% if mensajes %}
@@ -19,13 +19,13 @@
             <p class="{{tipo}}">{{ mensaje }}</p>
             {% endfor %}
         </div>
-        {% endif %}
+        {% endif%}
     {% endwith %}
-    <section class="container">
-        {% block contenido%}{% endblock %}
+<section class="container">
+        {% block contenido %}{% endblock %}
     </section>
     <footer>
-        &copy; Todos los derechos reservados 2021
+        &copy; Todos los derechos reservados 2021 
     </footer>
-</body> 
+</body>
 </html>
